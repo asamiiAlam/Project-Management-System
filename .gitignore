@@ -1,0 +1,99 @@
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# =========================
+# Virtual Environment
+# =========================
+venv/
+.venv/
+env/
+ENV/
+virtualenv/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Django
+# =========================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Uploaded files
+media/
+
+# Collected static files
+staticfiles/
+static_root/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# Testing / Coverage
+# =========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+
+# =========================
+# Type Checking / Linting
+# =========================
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Temporary Files
+# =========================
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# =========================
+# Celery
+# =========================
+celerybeat-schedule
+celerybeat-schedule.*
+celerybeat.pid
