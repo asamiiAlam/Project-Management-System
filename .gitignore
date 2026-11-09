@@ -97,3 +97,6 @@ Desktop.ini
 celerybeat-schedule
 celerybeat-schedule.*
 celerybeat.pid
+db.sqlite3
+db_backup.sqlite3
+data_backup.json
