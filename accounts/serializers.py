@@ -34,7 +34,9 @@ class RegistrationSerializer(serializers.ModelSerializer):
         write_only=True,
         validators=[validate_password],
     )
-
+    email=serializers.EmailField(
+        required=True,
+    )
 
     class Meta:
         model = User
@@ -175,4 +177,59 @@ class ForgotPasswordSerializer(serializers.Serializer):
 class LogoutSerializer(serializers.Serializer):
     refresh = serializers.CharField()
 
-    
+class ForgotPasswordSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True)
+
+    def validate_email(self, value):
+        if not User.objects.filter(email=value).exists():
+            raise serializers.ValidationError(
+                "No user is associated with this email address."
+            )
+        return value
+
+class ResetPasswordSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True)
+    otp = serializers.CharField(max_length=6, required=True)
+    new_password = serializers.CharField(
+        write_only=True,
+        required=True,
+        validators=[validate_password],
+    )
+    confirm_password = serializers.CharField(
+        write_only=True,
+        required=True,
+    )
+    def validate_new_password(self, value):
+        if len(value) < 8:
+            raise serializers.ValidationError(
+                "Password must contain at least 8 characters."
+            )
+
+        if not re.search(r"[A-Z]", value):
+            raise serializers.ValidationError(
+                "Password must contain at least one uppercase letter."
+            )
+
+        if not re.search(r"[a-z]", value):
+            raise serializers.ValidationError(
+                "Password must contain at least one lowercase letter."
+            )
+
+        if not re.search(r"[0-9]", value):
+            raise serializers.ValidationError(
+                "Password must contain at least one number."
+            )
+
+        if not re.search(r"[^A-Za-z0-9]", value):
+            raise serializers.ValidationError(
+                "Password must contain at least one special character."
+            )
+
+        return value
+
+    def validate(self, attrs):
+        if attrs["new_password"] != attrs["confirm_password"]:
+            raise serializers.ValidationError({
+                "confirm_password": "Passwords do not match."
+            })
+        return attrs
