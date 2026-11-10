@@ -1,0 +1,48 @@
+.create-project-form {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.create-project-form input,
+.create-project-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.create-project-form button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.create-project-form label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.create-project-form label:first-of-type {
+  margin-top: 12px;
+}
+
+.create-project-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  resize: vertical;
+}
