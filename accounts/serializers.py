@@ -233,3 +233,39 @@ class ResetPasswordSerializer(serializers.Serializer):
                 "confirm_password": "Passwords do not match."
             })
         return attrs
+from rest_framework import serializers
+from .models import Profile
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(
+        source="user.username",
+        read_only=True
+    )
+
+    class Meta:
+        model = Profile
+        fields = [
+            "id",
+            "username",
+            "role",
+            "profile_picture",
+        ]
+        read_only_fields = [
+            "id",
+            "username",
+            "role",
+        ]
+
+    def validate_profile_picture(self, value):
+        if value.size > 2 * 1024 * 1024:
+            raise serializers.ValidationError(
+                "Image size must be 2 MB or less."
+            )
+
+        if value.content_type not in ["image/jpeg", "image/png"]:
+            raise serializers.ValidationError(
+                "Only JPG and PNG images are allowed."
+            )
+
+        return value

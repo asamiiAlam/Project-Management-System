@@ -14,4 +14,5 @@ urlpatterns = [
     path('logout/', views.LogoutAPIView.as_view(), name='logout'),
     path('forgot-password/', views.ForgotPasswordAPIView.as_view(), name='forgot_password'),
     path('reset-password/', views.ResetPasswordView.as_view(), name='reset_password'),
+    path('profile-picture/', views.ProfilePictureAPIView.as_view(), name='profile_picture_update'),
 ]

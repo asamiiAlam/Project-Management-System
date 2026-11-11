@@ -22,6 +22,7 @@ class Profile(models.Model):
         ('Employee','Employee'),
         ('Manager','Manager'),
     ]
+    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)
 
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
