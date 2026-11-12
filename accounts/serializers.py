@@ -242,6 +242,11 @@ class ProfileSerializer(serializers.ModelSerializer):
         source="user.username",
         read_only=True
     )
+    user_id=serializers.IntegerField(
+        source="user.id",
+
+        read_only=True
+    )
 
     class Meta:
         model = Profile
@@ -250,6 +255,7 @@ class ProfileSerializer(serializers.ModelSerializer):
             "username",
             "role",
             "profile_picture",
+            "user_id",
         ]
         read_only_fields = [
             "id",
