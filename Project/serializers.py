@@ -12,9 +12,10 @@ class DepartmentSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'created_at', 'updated_at']
         read_only_fields = ['id', 'created_at', 'updated_at']
 class TaskSerializer(serializers.ModelSerializer):
+    task_file = serializers.FileField(required=False, allow_null=True)
     class Meta:
         model = Tasks
-        fields = ['id', 'created_by', 'title', 'description', 'project', 'assigned_to', 'status', 'start_date', 'finish_date', 'created_at', 'updated_at']
+        fields = ['id', 'created_by', 'title', 'task_file', 'description', 'project', 'assigned_to', 'status', 'start_date', 'finish_date', 'created_at', 'updated_at']
         read_only_fields = ['id', 'created_at', 'updated_at', 'created_by']
     def validate(self, attrs):
         start_date = attrs.get(
@@ -38,9 +39,10 @@ class TaskSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     tasks=TaskSerializer(many=True, read_only=True)
     
+    
     class Meta:
         model = Project
-        fields = ['id', 'name', 'description', 'department', 'manager', 'status', 'start_date', 'finish_date', 'created_at', 'updated_at', 'tasks']
+        fields = ['id', 'name', 'description', 'department', 'manager',  'status', 'start_date', 'finish_date', 'created_at', 'updated_at', 'tasks']
         read_only_fields = ['id', 'created_at', 'updated_at','manager']
     def validate(self, attrs):
         start_date = attrs.get(
@@ -72,3 +74,23 @@ class ChatboxSerializer(serializers.ModelSerializer):
         model = Chatbox
         fields = ['id', 'project', 'messages']
         read_only_fields = ['id', 'project']
+
+
+#Notification Serializers
+
+from .models import Notification
+
+class NotificationSerializer(serializers.ModelSerializer):
+    task_title = serializers.CharField(source="task.title", read_only=True)
+
+    class Meta:
+        model = Notification
+        fields = ["id", "task", "task_title", "message",  "created_at"]
+        read_only_fields = fields
+
+from .models import TaskSubmission
+class TaskSubmissionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TaskSubmission
+        fields = ['id', 'task','message','url', 'submitted_by', 'file', 'created_at']
+        read_only_fields = ['id', 'submitted_by', 'created_at']

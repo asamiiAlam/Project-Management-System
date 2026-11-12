@@ -42,6 +42,7 @@ class Tasks(models.Model):
         ('Completed', 'Completed'),
         ('On Hold', 'On Hold'),
     ]
+    task_file= models.FileField(upload_to='task_files/', blank=True, null=True)
     status = models.CharField(max_length=20, choices=status_choices, default='Not Started')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -88,3 +89,44 @@ class Messages(models.Model):
         return f"{self.sender.username}: {self.content[:30]}"
 
 
+class Notification(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="notifications"
+    )
+
+    task = models.ForeignKey(
+        Tasks,
+        on_delete=models.CASCADE,
+        related_name="notifications"
+    )
+
+    message = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+       
+
+    def __str__(self):
+        return f"{self.user.username} - {self.message[:30]}"
+
+#Task Review Model
+class TaskSubmission(models.Model):
+    task = models.ForeignKey(Tasks, on_delete=models.CASCADE, related_name='submissions')
+    submitted_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='task_submissions'
+    )
+    message = models.TextField(blank=True)
+    url = models.URLField(blank=True)
+    file = models.FileField(upload_to='task_submissions/', blank=True, null=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Submission for {self.task.title} by {self.submitted_by.username}"

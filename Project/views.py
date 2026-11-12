@@ -2,10 +2,10 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.exceptions import PermissionDenied
 from .permissions import Dept_Permission, Message_Permission, Project_Permission, Task_Permission, can_access_chat
-from .serializers import DepartmentSerializer, ProjectSerializer, TaskSerializer, ChatboxSerializer, MessageSerializer
+from .serializers import DepartmentSerializer, ProjectSerializer, TaskSerializer, ChatboxSerializer, MessageSerializer, TaskSubmissionSerializer
 from rest_framework.permissions import IsAuthenticated
 
-from .models import Department, Project, Tasks, Chatbox, Messages
+from .models import Department, Notification, Project, TaskSubmission, Tasks, Chatbox, Messages
 from rest_framework.views import APIView
 from rest_framework.response import Response
 # Create your views here.
@@ -113,9 +113,54 @@ class ChatboxDetailView_FOR_Admins(generics.RetrieveUpdateDestroyAPIView):
     queryset = Chatbox.objects.all()
     serializer_class = ChatboxSerializer
     permission_classes = [IsAuthenticated, Chatbox_Permission]
+class ALL_Tasks_OF_A_User(generics.ListAPIView):
+    serializer_class = TaskSerializer
+    permission_classes = [IsAuthenticated, Task_Permission]
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']
+        return Tasks.objects.filter(assigned_to_id=user_id, status__in=['In Progress', 'Pending','On Hold'])
+
+
+
+
+#Notification views
+from rest_framework import status
+from .serializers import NotificationSerializer
+
+class NotificationListView(generics.ListAPIView):
+   
+    serializer_class = NotificationSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Notification.objects.filter(user=self.request.user)
+
+
+class NotificationMarkReadView(APIView):
     
+    permission_classes = [IsAuthenticated]
 
+    def post(self, request, pk):
+        try:
+            notification = Notification.objects.get(pk=pk, user=request.user)
+        except Notification.DoesNotExist:
+            return Response({"detail": "Notification not found."}, status=status.HTTP_404_NOT_FOUND)
 
+        notification.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
+class TaskSubmissionListView(generics.ListCreateAPIView):
+    queryset = TaskSubmission.objects.all()
+    serializer_class = TaskSubmissionSerializer
+    permission_classes = [IsAuthenticated]
 
-
+    def perform_create(self, serializer):
+        task=serializer.validated_data["task"]
+        task_id = task.id
+        task = Tasks.objects.get(id=task_id)
+        if not self.request.user.tasks.filter(id=task_id).exists():
+            raise PermissionDenied("You are not assigned to this task.")    
+        else:
+            serializer.save(task=task, submitted_by=self.request.user)
+   

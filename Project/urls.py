@@ -15,8 +15,16 @@ urlpatterns = [
     path('chatboxes/admins/', views.Chatboxes_For_Admins.as_view(), name='chatboxes-for-admins'),
     path('chatboxes/admins/<int:pk>/', views.ChatboxDetailView_FOR_Admins.as_view(), name='chatbox-detail'),
     path('chatboxes/<int:project_id>/', views.ChatboxListView.as_view(), name='chatbox-detail'),
-    
+    path('tasks/user/<int:user_id>/', views.ALL_Tasks_OF_A_User.as_view(), name='all-tasks-of-a-user'),
+
     path('messages/', views.MessegaseListView.as_view(), name='message-list'),
     path('messages/<int:pk>/', views.MessageDetailView.as_view(), name='message-detail'),
-    
+    path('notifications/', views.NotificationListView.as_view(), name='notification-list'),
+    path('notifications/<int:pk>/read/', views.NotificationMarkReadView.as_view(), name='notification-read'),
+    path('tasks/submissions/', views.TaskSubmissionListView.as_view(), name='task-submission-list'),
+        
+
+
+
+
 ]

@@ -213,8 +213,7 @@ class ProfilePictureAPIView(APIView):
         profile = request.user.profile
         serializer = self.serializer_class(
             profile,
-            data=request.data,
-            partial=True
+            data=request.data
         )
         serializer.is_valid(raise_exception=True)
         serializer.save()
