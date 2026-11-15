@@ -115,11 +115,12 @@ class ChatboxDetailView_FOR_Admins(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthenticated, Chatbox_Permission]
 class ALL_Tasks_OF_A_User(generics.ListAPIView):
     serializer_class = TaskSerializer
-    permission_classes = [IsAuthenticated, Task_Permission]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         user_id = self.kwargs['user_id']
-        return Tasks.objects.filter(assigned_to_id=user_id, status__in=['In Progress', 'Pending','On Hold'])
+       
+        return Tasks.objects.filter(assigned_to_id=user_id, status__in=['In Progress', 'Not Started','On Hold'])
 
 
 

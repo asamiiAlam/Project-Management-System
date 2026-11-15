@@ -12,10 +12,11 @@ class DepartmentSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'created_at', 'updated_at']
         read_only_fields = ['id', 'created_at', 'updated_at']
 class TaskSerializer(serializers.ModelSerializer):
+    project_title = serializers.CharField(source="project.name", read_only=True)
     task_file = serializers.FileField(required=False, allow_null=True)
     class Meta:
         model = Tasks
-        fields = ['id', 'created_by', 'title', 'task_file', 'description', 'project', 'assigned_to', 'status', 'start_date', 'finish_date', 'created_at', 'updated_at']
+        fields = ['id', 'created_by', 'title', 'task_file', 'description', 'project', 'assigned_to', 'status', 'start_date', 'finish_date', 'created_at', 'updated_at', 'project_title']
         read_only_fields = ['id', 'created_at', 'updated_at', 'created_by']
     def validate(self, attrs):
         start_date = attrs.get(

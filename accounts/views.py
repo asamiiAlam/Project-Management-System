@@ -45,6 +45,7 @@ from rest_framework.response import Response
 
 class ChangePasswordAPIView(APIView):
     permission_classes = [IsAuthenticated]
+    serializer_class = ChangePasswordSerializer
 
     def post(self, request):
         serializer = ChangePasswordSerializer(
@@ -104,6 +105,7 @@ from .services import generate_otp
 
 class ForgotPasswordAPIView(APIView):
     permission_classes = [AllowAny]
+    serializer_class = ForgotPasswordSerializer
 
     def post(self, request):
         serializer = ForgotPasswordSerializer(data=request.data)
@@ -164,6 +166,7 @@ class ForgotPasswordAPIView(APIView):
 
 class ResetPasswordView(APIView):
     permission_classes = [AllowAny]
+    serializer_class = ResetPasswordSerializer
     def post(self, request):
         serializer = ResetPasswordSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)

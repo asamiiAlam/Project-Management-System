@@ -101,12 +101,13 @@ class ChangePasswordSerializer(serializers.Serializer):
     old_password = serializers.CharField(
         write_only=True,
         required=True,
+       
     )
 
     new_password = serializers.CharField(
         write_only=True,
         required=True,
-        validators=[validate_password],
+        style={"input_type": "password"}
     )
 
     confirm_password = serializers.CharField(
@@ -164,6 +165,7 @@ class ChangePasswordSerializer(serializers.Serializer):
             })
 
         return attrs
+   
 class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField(required=True)
 
@@ -247,7 +249,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
         read_only=True
     )
-
+ 
     class Meta:
         model = Profile
         fields = [
