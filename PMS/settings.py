@@ -57,6 +57,9 @@ INSTALLED_APPS = [
     'Project',
     'rest_framework_simplejwt.token_blacklist',
      'corsheaders',
+      # Cloudinary
+    'cloudinary_storage',
+    'cloudinary'
      
    
 ]
@@ -160,9 +163,15 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+import os
+
 STORAGES = {
     "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
+        "BACKEND": (
+            "cloudinary_storage.storage.MediaCloudinaryStorage"
+            if os.getenv("CLOUDINARY_URL")
+            else "django.core.files.storage.FileSystemStorage"
+        ),
     },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",

@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 # Create your models here.
 class Department(models.Model):
     name = models.CharField(max_length=100)
@@ -121,8 +121,9 @@ class TaskSubmission(models.Model):
     )
     message = models.TextField(blank=True)
     url = models.URLField(blank=True)
-    file = models.FileField(upload_to='task_submissions/', blank=True, null=True)
-
+    file = models.FileField(upload_to='task_submissions/',
+                            storage=RawMediaCloudinaryStorage(), blank=True, null=True)
+    
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
