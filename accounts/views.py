@@ -13,6 +13,8 @@ from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import TokenError
 
+from accounts.permissions import EMployeeList_Permission
+
 from .serializers import LogoutSerializer, ProfileSerializer
 from .models import OTP
 from django.contrib.auth import get_user_model
@@ -221,3 +223,12 @@ class ProfilePictureAPIView(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+#get a list of employees with role 'Employee'   
+
+class EmployeeListAPIView(generics.ListAPIView):
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated, EMployeeList_Permission]
+
+    def get_queryset(self):
+        return user.objects.filter(profile__role='Employee')

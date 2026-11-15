@@ -1,0 +1,1031 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$PLYgUbYLptAJaInTgWjA0X$3mqBWhoh+IlrG0TziPkkAw8XBmcGwHx+LGp9/PaWOW4=",
+    "last_login": "2026-11-15T03:39:26.547Z",
+    "is_superuser": true,
+    "username": "sami",
+    "first_name": "",
+    "last_name": "",
+    "email": "samiiialam@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-11-08T05:05:19.995Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$v0CvlrqBSKf3Obl41K9rtK$meYlGz6GVyobDs30AElk4jmL57NwlxJUjXZgx9/bEcs=",
+    "last_login": "2026-11-15T06:23:52.599Z",
+    "is_superuser": false,
+    "username": "sami2",
+    "first_name": "",
+    "last_name": "",
+    "email": "samii.chardike@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-08T05:49:30.187Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$xDPycRN24QxA1owzQ4tXNk$30IaG109JUKpxEh9277Vkf2yJexyG3SMLOTLsbL/T9E=",
+    "last_login": "2026-11-15T05:53:47.607Z",
+    "is_superuser": false,
+    "username": "leo",
+    "first_name": "",
+    "last_name": "",
+    "email": "leo@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-08T05:52:30.557Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$R2ZCYvXhrKkj7ZKHcFCTVp$MeJXdpj5YcQU2xD3YOYVDmEf3+tKdN/bTeW9rXkh6JI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Asif",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-09T03:00:05.867Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$3s32E78iM8ZH4EOhPbt22S$i+4HdqKiZlryjku9cYhUD2hnWGuy1CjlcnjAjfeB4+k=",
+    "last_login": "2026-11-15T08:13:24.497Z",
+    "is_superuser": false,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "asifulalamsami@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-09T04:02:26.639Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nYiNOt4Pgd8ezySu6P7ane$R7w2yCsqcyx9YBv0gQYo6iGDM9T31BhesqMYK6+VKUc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "samuuu",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-11T03:35:48.134Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$xOBUuOlzQ2xnOrdTdPjqvf$gO9sL0fkgI8eN4U2SncvGaZJTwlcxFRYp3Z8f+zWxXg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "arafat",
+    "first_name": "",
+    "last_name": "",
+    "email": "samiiiyuuui.chardike@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-11-12T11:10:50.886Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cflu9213ebo6ga615269wyd9khobfrq9",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xPyxe:N6uN9QMXqS3-mcRmqShdxR-viuQzwxpYxgRFP0JA5nk",
+    "expire_date": "2026-11-22T09:13:14.568Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ebv6dvm1cfs7p773a5y20wfi0evbatr6",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xSR5S:2AYKspFs92Gwz4svLeHytM0_sNWPdLfAb7A1oWAE7tQ",
+    "expire_date": "2026-11-29T03:39:26.551Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h39scp5jsiw4c64ftfl8ljh26unsrfci",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBCHRhduu8ZyDADUjU0Ke3KeHfbpAvd_vfef6tA61LC2tIcRlFX5dTpd4vEz1R3IA-q90nzVJd5jHpX9EGbHiZJr9vh_h0UamWrCYz4nDtHF2s4mjNnQPCcqLdIGdlm6R0yxk2IQM4LGjCdJ_EQIavPF_0yOGo:1xSVMa:iQA3sskKPXsBWq83e-DmIMxdfkAmhbiKl2Z7yybu4Cc",
+    "expire_date": "2026-11-29T08:13:24.511Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h3oynpbhsakvuubqwrdtr4jjf1w73a6l",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xQjhD:Mx2hzz9nYEsbpsirEqw0BqNQN85p-mxtY0ztAKWcGOg",
+    "expire_date": "2026-11-24T11:07:23.629Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ju5uidqd7sxdieztrp02as3kobdsiy10",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xRMT8:ySZNTB_JUIKJurJZOMdjr_zSP0P5cA5SZuTQv7_S7cE",
+    "expire_date": "2026-11-26T04:31:26.882Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k7m4zxlu8xhv8zx0yrat33xpy5rebofj",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xQzaL:Jv5O3hJiYuWrnWZMsQ_B75pV8UaMxw6oXLUxD0eQJuI",
+    "expire_date": "2026-11-25T04:05:21.763Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "t5ys6s22670zljbzxzwdrmyqlsas3s0y",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xQdZN:OIQMZpueh56UKYaSyDLKuh312CJaVw334pCnTdfLIdg",
+    "expire_date": "2026-11-24T04:34:53.806Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uh8owrbi5dhgddfepc396e6g4cnj5p8u",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xQiEA:CWhmctsgw1TemuD0jq3fHrIXCcqB5ornFrZ1oPfrVOg",
+    "expire_date": "2026-11-24T09:33:18.358Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zcxahhulubhxipcyfrw8gzn7leuxicng",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBGVpcuu8ZCMwMUjVtUtqV8e7apAvd_vfef6mYtrXGrckSR1YXZdTpd8uJHjLtgO9pus2a5mldxqx3RR-06WFmeV4P9--gpla_NRVhGxx4j4CYkjBCsSU4McZ2AEw5QDaBwLseGSx2vXhDTK6cUYx6fwDiITet:1xQGhY:iEJx3vL7DM1QHWUJy0fB8tQWQLANP8GE8Y6peXEVCmo",
+    "expire_date": "2026-11-23T04:09:48.323Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 1,
+  "fields": {
+    "profile_picture": "",
+    "user": [
+      "sami"
+    ],
+    "role": "Manager",
+    "created_at": "2026-11-10T08:59:47.845Z",
+    "updated_at": "2026-11-10T09:01:01.725Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 2,
+  "fields": {
+    "profile_picture": "profile_pictures/Screenshot_2026-11-02_180011.png",
+    "user": [
+      "sami2"
+    ],
+    "role": "Employee",
+    "created_at": "2026-11-10T08:59:47.856Z",
+    "updated_at": "2026-11-11T11:45:02.950Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 3,
+  "fields": {
+    "profile_picture": "profile_pictures/Screenshot_2026-11-08_121331.png",
+    "user": [
+      "leo"
+    ],
+    "role": "Manager",
+    "created_at": "2026-11-10T08:59:47.861Z",
+    "updated_at": "2026-11-11T10:15:19.505Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 4,
+  "fields": {
+    "profile_picture": "",
+    "user": [
+      "Asif"
+    ],
+    "role": "Employee",
+    "created_at": "2026-11-10T08:59:47.867Z",
+    "updated_at": "2026-11-10T08:59:47.867Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 5,
+  "fields": {
+    "profile_picture": "profile_pictures/Screenshot_2026-11-02_151117.png",
+    "user": [
+      "test"
+    ],
+    "role": "Manager",
+    "created_at": "2026-11-10T08:59:47.871Z",
+    "updated_at": "2026-11-11T11:39:55.887Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 6,
+  "fields": {
+    "profile_picture": "",
+    "user": [
+      "samuuu"
+    ],
+    "role": "Employee",
+    "created_at": "2026-11-11T03:35:48.250Z",
+    "updated_at": "2026-11-11T03:35:48.250Z"
+  }
+},
+{
+  "model": "accounts.profile",
+  "pk": 7,
+  "fields": {
+    "profile_picture": "",
+    "user": [
+      "arafat"
+    ],
+    "role": "Employee",
+    "created_at": "2026-11-12T11:10:51.024Z",
+    "updated_at": "2026-11-12T11:10:51.024Z"
+  }
+},
+{
+  "model": "Project.department",
+  "pk": 2,
+  "fields": {
+    "name": "Tech",
+    "description": "A good Department",
+    "created_at": "2026-11-10T04:46:57.539Z",
+    "updated_at": "2026-11-10T04:46:57.539Z"
+  }
+},
+{
+  "model": "Project.project",
+  "pk": 5,
+  "fields": {
+    "name": "tst-er-project",
+    "status": "In Progress",
+    "manager": [
+      "test"
+    ],
+    "description": "asasa",
+    "department": 2,
+    "created_at": "2026-11-11T04:10:19.950Z",
+    "updated_at": "2026-11-11T04:10:19.950Z",
+    "start_date": "2026-11-25",
+    "finish_date": "2026-12-11"
+  }
+},
+{
+  "model": "Project.project",
+  "pk": 6,
+  "fields": {
+    "name": "A new Project",
+    "status": "In Progress",
+    "manager": [
+      "sami"
+    ],
+    "description": "asasasa",
+    "department": 2,
+    "created_at": "2026-11-11T08:17:11.978Z",
+    "updated_at": "2026-11-11T08:17:11.978Z",
+    "start_date": "2026-11-03",
+    "finish_date": "2026-11-30"
+  }
+},
+{
+  "model": "Project.tasks",
+  "pk": 6,
+  "fields": {
+    "title": "title of test",
+    "description": "sasas",
+    "created_by": [
+      "sami"
+    ],
+    "project": 6,
+    "assigned_to": [
+      "test"
+    ],
+    "task_file": "",
+    "status": "Not Started",
+    "created_at": "2026-11-11T08:22:43.056Z",
+    "updated_at": "2026-11-11T08:22:43.056Z",
+    "start_date": "2026-11-17",
+    "finish_date": "2026-11-17"
+  }
+},
+{
+  "model": "Project.tasks",
+  "pk": 7,
+  "fields": {
+    "title": "eibar finished",
+    "description": "sami vai abar ashlemn",
+    "created_by": [
+      "test"
+    ],
+    "project": 5,
+    "assigned_to": [
+      "leo"
+    ],
+    "task_file": "",
+    "status": "In Progress",
+    "created_at": "2026-11-12T08:10:12.674Z",
+    "updated_at": "2026-11-12T08:10:12.674Z",
+    "start_date": "2026-11-27",
+    "finish_date": "2026-11-30"
+  }
+},
+{
+  "model": "Project.tasks",
+  "pk": 8,
+  "fields": {
+    "title": "notun kaaj dilam bai",
+    "description": "sasasa",
+    "created_by": [
+      "test"
+    ],
+    "project": 5,
+    "assigned_to": [
+      "leo"
+    ],
+    "task_file": "",
+    "status": "In Progress",
+    "created_at": "2026-11-15T05:32:04.904Z",
+    "updated_at": "2026-11-15T05:32:04.904Z",
+    "start_date": "2026-11-12",
+    "finish_date": "2026-12-11"
+  }
+},
+{
+  "model": "Project.tasks",
+  "pk": 9,
+  "fields": {
+    "title": "abaro sami vaiyer kaaj",
+    "description": "sasas",
+    "created_by": [
+      "test"
+    ],
+    "project": 5,
+    "assigned_to": [
+      "sami2"
+    ],
+    "task_file": "",
+    "status": "In Progress",
+    "created_at": "2026-11-15T05:34:00.274Z",
+    "updated_at": "2026-11-15T05:34:00.274Z",
+    "start_date": "2026-11-26",
+    "finish_date": "2026-12-12"
+  }
+},
+{
+  "model": "Project.tasks",
+  "pk": 10,
+  "fields": {
+    "title": "sami vaiyer test",
+    "description": "sasas",
+    "created_by": [
+      "test"
+    ],
+    "project": 5,
+    "assigned_to": [
+      "arafat"
+    ],
+    "task_file": "",
+    "status": "In Progress",
+    "created_at": "2026-11-15T06:01:13.097Z",
+    "updated_at": "2026-11-15T06:01:13.097Z",
+    "start_date": "2026-11-23",
+    "finish_date": "2026-12-05"
+  }
+},
+{
+  "model": "Project.chatbox",
+  "pk": 1,
+  "fields": {
+    "project": 5
+  }
+},
+{
+  "model": "Project.chatbox",
+  "pk": 2,
+  "fields": {
+    "project": 6
+  }
+},
+{
+  "model": "Project.messages",
+  "pk": 1,
+  "fields": {
+    "chatbox": 1,
+    "sender": [
+      "test"
+    ],
+    "content": "asasasasaaasasasa",
+    "created_at": "2026-11-11T04:27:22.264Z"
+  }
+},
+{
+  "model": "Project.messages",
+  "pk": 2,
+  "fields": {
+    "chatbox": 1,
+    "sender": [
+      "test"
+    ],
+    "content": "sami is the best yooo",
+    "created_at": "2026-11-11T08:06:20.675Z"
+  }
+},
+{
+  "model": "Project.messages",
+  "pk": 3,
+  "fields": {
+    "chatbox": 1,
+    "sender": [
+      "test"
+    ],
+    "content": "sami is awesome",
+    "created_at": "2026-11-11T08:06:44.492Z"
+  }
+},
+{
+  "model": "Project.messages",
+  "pk": 4,
+  "fields": {
+    "chatbox": 2,
+    "sender": [
+      "test"
+    ],
+    "content": "ami access korbo eita",
+    "created_at": "2026-11-11T08:23:23.651Z"
+  }
+},
+{
+  "model": "Project.messages",
+  "pk": 5,
+  "fields": {
+    "chatbox": 2,
+    "sender": [
+      "test"
+    ],
+    "content": "ami eta access korbo",
+    "created_at": "2026-11-11T08:36:08.314Z"
+  }
+},
+{
+  "model": "Project.messages",
+  "pk": 6,
+  "fields": {
+    "chatbox": 1,
+    "sender": [
+      "test"
+    ],
+    "content": "sasasasasaami pari na yooooo",
+    "created_at": "2026-11-11T10:58:53.582Z"
+  }
+},
+{
+  "model": "Project.notification",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "leo"
+    ],
+    "task": 7,
+    "message": "You have been assigned a new task: eibar finished (project: tst-er-project)",
+    "created_at": "2026-11-12T08:10:12.682Z"
+  }
+},
+{
+  "model": "Project.notification",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "leo"
+    ],
+    "task": 8,
+    "message": "You have been assigned a new task: notun kaaj dilam bai (project: tst-er-project)",
+    "created_at": "2026-11-15T05:32:04.913Z"
+  }
+},
+{
+  "model": "Project.notification",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "sami2"
+    ],
+    "task": 9,
+    "message": "You have been assigned a new task: abaro sami vaiyer kaaj (project: tst-er-project)",
+    "created_at": "2026-11-15T05:34:00.282Z"
+  }
+},
+{
+  "model": "Project.notification",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "arafat"
+    ],
+    "task": 10,
+    "message": "You have been assigned a new task: sami vaiyer test (project: tst-er-project)",
+    "created_at": "2026-11-15T06:01:13.109Z"
+  }
+},
+{
+  "model": "Project.tasksubmission",
+  "pk": 3,
+  "fields": {
+    "task": 7,
+    "submitted_by": [
+      "leo"
+    ],
+    "message": "asasasas",
+    "url": "",
+    "file": "",
+    "created_at": "2026-11-12T09:19:48.929Z"
+  }
+},
+{
+  "model": "token_blacklist.outstandingtoken",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "sami"
+    ],
+    "jti": "3f959cde5dd54130a66e4565fac45f74",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NDczMzA4NiwiaWF0IjoxNzk0MTI4Mjg2LCJqdGkiOiIzZjk1OWNkZTVkZDU0MTMwYTY2ZTQ1NjVmYWM0NWY3NCIsInVzZXJfaWQiOiIxIiwiaGFzaF9wYXNzd29yZCI6IkE3NEM1NjNGOEQxQTgxMzk4OTAwNEE1MUEzQUE5MUIyIn0.1ITIpnA2GzQlhKD94XRynXs-SIO02Q05S-GP55je0WU",
+    "created_at": "2026-11-08T09:00:58.777Z",
+    "expires_at": "2026-11-15T08:58:06Z"
+  }
+},
+{
+  "model": "token_blacklist.outstandingtoken",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "jti": "50ec0bee360a4e0188b33ded2d6bef51",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NDgxNzM0MSwiaWF0IjoxNzk0MjEyNTQxLCJqdGkiOiI1MGVjMGJlZTM2MGE0ZTAxODhiMzNkZWQyZDZiZWY1MSIsInVzZXJfaWQiOiI2IiwiaGFzaF9wYXNzd29yZCI6IjUyMUIyRkEyM0M4OTEzNDBBN0I4QjIxQzhGMzkyNTVFIn0.UKxOR1pxJAmkg_ToNdJXjYeYKD49MFLeDPXksStdJ68",
+    "created_at": "2026-11-09T08:22:21.760Z",
+    "expires_at": "2026-11-16T08:22:21Z"
+  }
+},
+{
+  "model": "token_blacklist.outstandingtoken",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "test"
+    ],
+    "jti": "89ffefb4964b4317a7fd8f3e5194d6c4",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc5NDgxNzUyNiwiaWF0IjoxNzk0MjEyNzI2LCJqdGkiOiI4OWZmZWZiNDk2NGI0MzE3YTdmZDhmM2U1MTk0ZDZjNCIsInVzZXJfaWQiOiI2IiwiaGFzaF9wYXNzd29yZCI6IjUyMUIyRkEyM0M4OTEzNDBBN0I4QjIxQzhGMzkyNTVFIn0.Cs7msPjAs-RABCDr_VpRJfEU933nATS4RuqJbSZ2qaI",
+    "created_at": "2026-11-09T08:25:26.887Z",
+    "expires_at": "2026-11-16T08:25:26Z"
+  }
+},
+{
+  "model": "token_blacklist.blacklistedtoken",
+  "pk": 1,
+  "fields": {
+    "token": 1,
+    "blacklisted_at": "2026-11-08T09:00:58.788Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-11-08T05:48:06.666Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "sami2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-11-09T04:12:24.612Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "accounts",
+      "otp"
+    ],
+    "object_id": "1",
+    "object_repr": "OTP for test - 172438",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-11-09T04:33:51.981Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "accounts",
+      "otp"
+    ],
+    "object_id": "2",
+    "object_repr": "OTP for test - 901057",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-11-10T04:39:52.788Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "department"
+    ],
+    "object_id": "1",
+    "object_repr": "abc",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-11-10T05:31:15.241Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "project"
+    ],
+    "object_id": "1",
+    "object_repr": "Brightening Toner",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-11-10T08:08:41.107Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "tasks"
+    ],
+    "object_id": "1",
+    "object_repr": "sami",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-11-10T09:01:01.730Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "accounts",
+      "profile"
+    ],
+    "object_id": "1",
+    "object_repr": "Profile object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-11-10T09:24:29.660Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "accounts",
+      "profile"
+    ],
+    "object_id": "5",
+    "object_repr": "Profile for test - Manager",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-11-10T09:25:37.534Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "leo",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-11-10T09:34:01.184Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "accounts",
+      "profile"
+    ],
+    "object_id": "3",
+    "object_repr": "Profile for leo - Manager",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-11-10T09:35:21.972Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "tasks"
+    ],
+    "object_id": "1",
+    "object_repr": "sasa",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-11-10T09:48:43.034Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "tasks"
+    ],
+    "object_id": "2",
+    "object_repr": "sasasasasasasasasashello",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-11-10T11:07:23.614Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "sami2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-11-11T03:34:05.565Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "project"
+    ],
+    "object_id": "2",
+    "object_repr": "Brightening Toner",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-11-11T03:35:48.250Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "7",
+    "object_repr": "samuuu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-11-11T04:06:06.803Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "project"
+    ],
+    "object_id": "3",
+    "object_repr": "Sami-DB",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-11-11T04:10:10.952Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "project"
+    ],
+    "object_id": "4",
+    "object_repr": "tst-er-project",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-11-11T04:27:22.266Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "messages"
+    ],
+    "object_id": "1",
+    "object_repr": "test: asasasasaaasasasa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-11-11T08:17:11.980Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "project"
+    ],
+    "object_id": "6",
+    "object_repr": "A new Project",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-11-11T08:22:43.061Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "tasks"
+    ],
+    "object_id": "6",
+    "object_repr": "title of test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-11-12T09:14:38.048Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "tasksubmission"
+    ],
+    "object_id": "1",
+    "object_repr": "Submission for title of test by sami2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-11-12T09:16:31.604Z",
+    "user": [
+      "sami"
+    ],
+    "content_type": [
+      "Project",
+      "tasksubmission"
+    ],
+    "object_id": "2",
+    "object_repr": "Submission for eibar finished by sami2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]
