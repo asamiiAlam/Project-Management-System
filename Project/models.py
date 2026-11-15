@@ -42,7 +42,7 @@ class Tasks(models.Model):
         ('Completed', 'Completed'),
         ('On Hold', 'On Hold'),
     ]
-    task_file= models.FileField(upload_to='task_files/', blank=True, null=True)
+    task_file= models.FileField(upload_to='task_files/', storage=RawMediaCloudinaryStorage(), blank=True, null=True)
     status = models.CharField(max_length=20, choices=status_choices, default='Not Started')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
