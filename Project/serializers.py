@@ -43,7 +43,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Project
-        fields = ['id', 'name', 'description', 'department', 'manager',  'status', 'start_date', 'finish_date', 'created_at', 'updated_at', 'tasks']
+        fields = ['id', 'name', 'description', 'department', 'manager',  'status', 'priority', 'start_date', 'finish_date', 'created_at', 'updated_at', 'tasks']
         read_only_fields = ['id', 'created_at', 'updated_at','manager']
     def validate(self, attrs):
         start_date = attrs.get(

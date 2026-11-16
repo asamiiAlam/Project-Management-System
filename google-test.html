@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Login Test</title>
+</head>
+<body>
+    <h2>Test Google Sign-In</h2>
+
+    <div id="g_id_onload"
+         data-client_id="166725671927-2kvqq3veiafd24v5g3c6l2770h16bqk2.apps.googleusercontent.com"
+         data-callback="handleGoogleLogin">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard">
+    </div>
+
+    <script>
+        function handleGoogleLogin(response) {
+            const token = response.credential;
+
+            document.getElementById("token").value = token;
+        }
+    </script>
+
+    <textarea id="token" rows="10" cols="80"
+              placeholder="Google ID token appears here"></textarea>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</body>
+</html>

@@ -19,6 +19,13 @@ class Project(models.Model):
         ('Completed', 'Completed'),
         ('On Hold', 'On Hold'),
     ]
+    PRIORITY_CHOICES = [
+        ("Low", "Low"),
+        ("Medium", "Medium"),
+        ("High", "High"),
+        ("Urgent", "Urgent"),
+    ]
+
     status = models.CharField(max_length=20, choices=status_choices, default='Not Started')
     manager=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='managed_projects')
     description = models.TextField(blank=True, null=True)
@@ -26,6 +33,7 @@ class Project(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     start_date = models.DateField(blank=True, null=True)
+    priority = models.CharField(max_length=20, choices=PRIORITY_CHOICES, default='Medium')
     finish_date = models.DateField(blank=True, null=True)
     
     def __str__(self):
