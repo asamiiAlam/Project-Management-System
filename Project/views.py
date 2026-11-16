@@ -164,4 +164,11 @@ class TaskSubmissionListView(generics.ListCreateAPIView):
             raise PermissionDenied("You are not assigned to this task.")    
         else:
             serializer.save(task=task, submitted_by=self.request.user)
-   
+
+class ALL_Projects_OF_A_Manager(generics.ListAPIView):
+    serializer_class = ProjectSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        user_id = self.request.user.id
+        return Project.objects.filter(manager_id=user_id)

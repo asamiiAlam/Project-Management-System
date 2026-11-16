@@ -22,7 +22,8 @@ urlpatterns = [
     path('notifications/', views.NotificationListView.as_view(), name='notification-list'),
     path('notifications/<int:pk>/read/', views.NotificationMarkReadView.as_view(), name='notification-read'),
     path('tasks/submissions/', views.TaskSubmissionListView.as_view(), name='task-submission-list'),
-        
+
+    path('all-projects/manager/', views.ALL_Projects_OF_A_Manager.as_view(), name='all-projects-of-a-manager'),
 
 
 
