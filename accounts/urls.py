@@ -16,4 +16,7 @@ urlpatterns = [
     path('reset-password/', views.ResetPasswordView.as_view(), name='reset_password'),
     path('profile-picture/', views.ProfilePictureAPIView.as_view(), name='profile_picture_update'),
     path('all_employees/', views.EmployeeListAPIView.as_view(), name='employee-list'),
+    path('google-login/', views.GoogleLoginAPIView.as_view(), name='google_login'),
+    
+
 ]
