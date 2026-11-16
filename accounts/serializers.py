@@ -3,11 +3,7 @@ from rest_framework import serializers, status
 from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
 import re
-from django.conf import settings
-from google.oauth2 import id_token as google_id_token
-from google.auth.transport import requests as google_requests
-from rest_framework_simplejwt.tokens import RefreshToken
-from .serializers import GoogleLoginSerializer
+
 
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
