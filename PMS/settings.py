@@ -41,7 +41,7 @@ if render_host:
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    # "https://pms-frontend.vercel.app",
+    "https://management-system-practice.netlify.app"
 ]
 # Application definition
 
@@ -164,7 +164,7 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 import os
-
+GOOGLE_CLIENT_ID = os.environ["GOOGLE_CLIENT_ID"]
 STORAGES = {
     "default": {
         "BACKEND": (
