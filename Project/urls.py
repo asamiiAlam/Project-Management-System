@@ -25,7 +25,7 @@ urlpatterns = [
 
     path('all-projects/manager/', views.ALL_Projects_OF_A_Manager.as_view(), name='all-projects-of-a-manager'),
 
-
+   path('projects/<int:project_id>/submissions/', views.ProjectSubmissionsListView.as_view(), name='project-submissions'),
 
 
 ]

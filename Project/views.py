@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from rest_framework import generics
 from rest_framework.exceptions import PermissionDenied
 from .permissions import Dept_Permission, Message_Permission, Project_Permission, Task_Permission, can_access_chat
@@ -171,4 +171,19 @@ class ALL_Projects_OF_A_Manager(generics.ListAPIView):
 
     def get_queryset(self):
         user_id = self.request.user.id
-        return Project.objects.filter(manager_id=user_id)
+class ProjectSubmissionsListView(generics.ListAPIView):
+    serializer_class = TaskSubmissionSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        project = get_object_or_404(Project, pk=self.kwargs['project_id'])
+        user = self.request.user
+
+        if not (user.is_superuser or project.manager_id == user.id):
+            raise PermissionDenied("You are not the manager of this project.")
+
+        return (
+            TaskSubmission.objects
+            .filter(task__project=project)
+            .select_related('task', 'submitted_by')
+        )
