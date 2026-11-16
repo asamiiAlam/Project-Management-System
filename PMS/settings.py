@@ -15,6 +15,12 @@ from dotenv import load_dotenv
 import dj_database_url
 from pathlib import Path
 
+GOOGLE_CLIENT_ID = os.environ["GOOGLE_CLIENT_ID"]
+RESEND_API_KEY = os.getenv("RESEND_API_KEY")
+RESEND_FROM_EMAIL = os.getenv(
+    "RESEND_FROM_EMAIL",
+    "onboarding@resend.dev"
+)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))  # Load environment variables from .env file
@@ -163,8 +169,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-import os
-GOOGLE_CLIENT_ID = os.environ["GOOGLE_CLIENT_ID"]
+
 STORAGES = {
     "default": {
         "BACKEND": (

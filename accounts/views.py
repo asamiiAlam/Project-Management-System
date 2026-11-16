@@ -5,7 +5,7 @@ from django.conf import settings
 # Create your views here.
 from rest_framework import generics, status
 from rest_framework.permissions import AllowAny, IsAuthenticated
-
+from .services import send_otp_email
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
@@ -142,30 +142,29 @@ class ForgotPasswordAPIView(APIView):
 
             otp = generate_otp()
 
-            OTP.objects.create(
+            otp_instance = OTP.objects.create(
                 user=user,
                 code=otp,
             )
 
-            result = send_mail(
-                subject="Password Reset OTP",
-                message=f"Your OTP for password reset is: {otp}",
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[user.email],
-                fail_silently=False,
+            # Send OTP using Resend
+            email_sent = send_otp_email(
+                email=user.email,
+                otp=otp
             )
 
-            if result == 0:
+            if not email_sent:
+                otp_instance.delete()
+
                 return Response(
-                    {"detail": "Unable to send OTP."},
+                    {"detail": "Unable to send OTP. Please try again."},
                     status=status.HTTP_503_SERVICE_UNAVAILABLE,
                 )
 
         return Response(
             message,
             status=status.HTTP_200_OK,
-        )                           
-
+        )
 class ResetPasswordView(APIView):
     permission_classes = [AllowAny]
     serializer_class = ResetPasswordSerializer
