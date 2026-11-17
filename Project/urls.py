@@ -25,7 +25,13 @@ urlpatterns = [
 
     path('all-projects/manager/', views.ALL_Projects_OF_A_Manager.as_view(), name='all-projects-of-a-manager'),
 
-   path('projects/<int:project_id>/submissions/', views.ProjectSubmissionsListView.as_view(), name='project-submissions'),
+    path('projects/<int:project_id>/submissions/', views.ProjectSubmissionsListView.as_view(), name='project-submissions'),
 
-
+    path('projects/<int:project_id>/health/', views.ProjectHealthAPIView.as_view(), name='project-health'),
+    path(
+    'projects/<int:project_id>/chat-summary/',
+    views.ProjectChatSummaryAPIView.as_view(),
+    name='project-chat-summary'
+    ),
+   
 ]

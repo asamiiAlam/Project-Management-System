@@ -187,3 +187,59 @@ class ProjectSubmissionsListView(generics.ListAPIView):
             .filter(task__project=project)
             .select_related('task', 'submitted_by')
         )
+
+
+# ai projct health view
+from .services.ai_health import analyze_project_health
+class ProjectHealthAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, project_id):
+        project = get_object_or_404(
+            Project,
+            id=project_id
+        )
+
+        # Only project manager or superuser
+        if not (
+            request.user.is_superuser
+            or project.manager_id == request.user.id
+        ):
+            raise PermissionDenied(
+                "You cannot access this project's health report."
+            )
+
+        try:
+            result = analyze_project_health(project.id)
+
+        except Exception:
+            return Response(
+                {"detail": "Unable to generate AI health report."},
+                status=status.HTTP_503_SERVICE_UNAVAILABLE
+            )
+
+        return Response(result, status=status.HTTP_200_OK)
+
+
+# message summarizer
+from .services.chat_summarizer import summarize_project_chat
+class ProjectChatSummaryAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, project_id):
+
+        project = get_object_or_404(Project, id=project_id)
+
+
+        if not can_access_chat(request.user, project):
+            raise PermissionDenied("You don't have permission to access this project chat.")
+
+        try:
+            result = summarize_project_chat(project.id)
+            return Response(result, status=200)
+
+        except Exception as e:
+            return Response(
+                {"detail": "Unable to generate chat summary.", "error": str(e)},
+                status=503
+            )
