@@ -171,6 +171,7 @@ class ALL_Projects_OF_A_Manager(generics.ListAPIView):
 
     def get_queryset(self):
         user_id = self.request.user.id
+        return Project.objects.filter(manager_id=user_id)
 class ProjectSubmissionsListView(generics.ListAPIView):
     serializer_class = TaskSubmissionSerializer
     permission_classes = [IsAuthenticated]
