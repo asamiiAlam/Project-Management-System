@@ -66,7 +66,9 @@ INSTALLED_APPS = [
      'corsheaders',
       # Cloudinary
     'cloudinary_storage',
-    'cloudinary'
+    'cloudinary',
+     "django_filters",
+     'ai_assistant',
      
    
 ]

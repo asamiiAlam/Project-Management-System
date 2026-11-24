@@ -29,7 +29,7 @@ urlpatterns = [
 
     path('projects/<int:project_id>/health/', views.ProjectHealthAPIView.as_view(), name='project-health'),
     path(
-    'projects/<int:project_id>/chat-summary/',
+    '   ',
     views.ProjectChatSummaryAPIView.as_view(),
     name='project-chat-summary'
     ),

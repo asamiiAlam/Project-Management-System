@@ -9,6 +9,8 @@ from .models import Department, Notification, Project, TaskSubmission, Tasks, Ch
 from rest_framework.views import APIView
 from rest_framework.response import Response
 # Create your views here.
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
 class DepartmentListView(generics.ListCreateAPIView):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
@@ -34,6 +36,9 @@ class TaskListView(generics.ListCreateAPIView):
     queryset = Tasks.objects.all()
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated,Task_Permission]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter,]
+    filterset_fields = ['status',  'project__priority']
+    search_fields = ['title', 'description', 'assigned_to__username','project__name']
     def perform_create(self, serializer):
       
         project = serializer.validated_data["project"]
@@ -116,9 +121,14 @@ class ChatboxDetailView_FOR_Admins(generics.RetrieveUpdateDestroyAPIView):
 class ALL_Tasks_OF_A_User(generics.ListAPIView):
     serializer_class = TaskSerializer
     permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ['status', 'project__priority']
+    search_fields = ['title', 'description', 'assigned_to__username','project__name']
 
     def get_queryset(self):
         user_id = self.kwargs['user_id']
+        if self.request.user.id != user_id and not self.request.user.is_superuser:
+            raise PermissionDenied("You do not have permission to view tasks for this user.")
        
         return Tasks.objects.filter(assigned_to_id=user_id, status__in=['In Progress', 'Not Started','On Hold'])
 
@@ -168,6 +178,9 @@ class TaskSubmissionListView(generics.ListCreateAPIView):
 class ALL_Projects_OF_A_Manager(generics.ListAPIView):
     serializer_class = ProjectSerializer
     permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter]
+    filterset_fields = ['status', 'priority']
+    search_fields = ['name', 'description']
 
     def get_queryset(self):
         user_id = self.request.user.id

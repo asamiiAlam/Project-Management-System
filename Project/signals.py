@@ -35,3 +35,15 @@ def notify_task_assignment(sender, instance, created, **kwargs):
             message=f"You have been assigned a new task: {instance.title} "
                     f"(project: {instance.project.name})",
         )
+
+
+
+@receiver(post_save, sender=Tasks)
+def index_task_file(sender, instance, created, **kwargs):
+
+    if created and instance.task_file:
+        from ai_assistant.rag.vector_store import store_task_document
+        store_task_document(instance)
+
+
+
