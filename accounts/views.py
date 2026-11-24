@@ -233,9 +233,8 @@ class ProfilePictureAPIView(APIView):
 class EmployeeListAPIView(generics.ListAPIView):
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, EMployeeList_Permission]
-
     def get_queryset(self):
-        return user.objects.filter(profile__role='Employee')
+        return user.objects.filter(is_active=True).exclude(id=self.request.user.id)
 
 class GoogleLoginAPIView(APIView):
     permission_classes = [AllowAny]
