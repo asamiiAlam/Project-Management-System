@@ -233,6 +233,7 @@ class ProfilePictureAPIView(APIView):
 class EmployeeListAPIView(generics.ListAPIView):
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, EMployeeList_Permission]
+    pagination_class = None  # Disable pagination for this view
     def get_queryset(self):
         return user.objects.filter(is_active=True).exclude(id=self.request.user.id)
 
