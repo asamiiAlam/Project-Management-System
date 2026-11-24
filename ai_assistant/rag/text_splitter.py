@@ -1,7 +1,7 @@
 
 from functools import lru_cache
 
-from transformers import AutoTokenizer
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
@@ -10,6 +10,7 @@ MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 @lru_cache(maxsize=1)
 def get_tokenizer():
+    from transformers import AutoTokenizer
     return AutoTokenizer.from_pretrained(MODEL_NAME)
 
 

@@ -2,7 +2,7 @@ from langchain_core.tools import tool
 from Project.models import Tasks
 from Project.models import Project, Department
 from django.db.models import Q
-from .rag.vector_store import search_task_documents
+
 
 
 def create_task_tools(user_id):
@@ -12,6 +12,7 @@ def create_task_tools(user_id):
         Use when the user asks about requirements, instructions,
         specifications, or information inside task attachments.
         """
+        from .rag.vector_store import search_task_documents
 
         documents = search_task_documents(user_id=user_id, query=query)
 
