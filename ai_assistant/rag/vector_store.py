@@ -1,18 +1,18 @@
 
 import os
 
-from langchain_huggingface import HuggingFaceEmbeddings
+
 from langchain_postgres import PGVector
 
 from .document_loader import load_task_document
 from .text_splitter import split_documents
+from langchain_community.embeddings.fastembed import FastEmbedEmbeddings
 
 
 # 1. Load the Hugging Face embedding model
-embeddings = HuggingFaceEmbeddings(
+embeddings = FastEmbedEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
-    model_kwargs={"device": "cpu"},
-    encode_kwargs={"normalize_embeddings": True},
+    threads=2,
 )
 
 
