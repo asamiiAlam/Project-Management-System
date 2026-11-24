@@ -29,9 +29,14 @@ urlpatterns = [
 
     path('projects/<int:project_id>/health/', views.ProjectHealthAPIView.as_view(), name='project-health'),
     path(
-    '   ',
+    'chat-summary/<int:project_id>/',
     views.ProjectChatSummaryAPIView.as_view(),
     name='project-chat-summary'
+    ),
+    path(
+        'prepare-task-document/<int:task_id>/',
+        views.PrepareTaskDocumentView.as_view(),
+        name='prepare-task-document'
     ),
    
 ]
