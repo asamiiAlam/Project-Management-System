@@ -37,39 +37,5 @@ def notify_task_assignment(sender, instance, created, **kwargs):
         )
 
 
-import logging
 
-from django.db import transaction
-
-logger = logging.getLogger(__name__)
-
-@receiver(post_save, sender=Tasks)
-def index_task_file(sender, instance, created, **kwargs):
-
-    if not (created and instance.task_file):
-        return
-
-    task_id = instance.id
-
-    def run_indexing():
-        try:
-            from ai_assistant.rag.vector_store import store_task_document
-
-            task = Tasks.objects.get(id=task_id)
-
-            ids = store_task_document(task)
-
-            logger.warning(
-                "RAG SUCCESS: Task %s, chunks=%s",
-                task_id,
-                len(ids)
-            )
-
-        except Exception:
-            logger.exception(
-                "RAG FAILED: Task %s",
-                task_id
-            )
-
-    transaction.on_commit(run_indexing)
 
