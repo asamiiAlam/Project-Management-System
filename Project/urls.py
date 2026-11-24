@@ -33,10 +33,6 @@ urlpatterns = [
     views.ProjectChatSummaryAPIView.as_view(),
     name='project-chat-summary'
     ),
-    path(
-        'prepare-task-document/<int:task_id>/',
-        views.PrepareTaskDocumentView.as_view(),
-        name='prepare-task-document'
-    ),
+ 
    
 ]
